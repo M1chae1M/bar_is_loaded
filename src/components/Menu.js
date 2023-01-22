@@ -41,10 +41,16 @@ class Menu extends React.Component{
     return(
       <div id='Menu' style={styles.Menu}>
         <div style={styles.menuHeader}>
-          <div style={styles.menuHeaderContent} className={this.state.isBarInputFocused===true?'focused':'notfocused'}>
+          <div
+            style={styles.menuHeaderContent}
+            className={this.state.isBarInputFocused===true?'focused':'notfocused'}
+          >
             bar weight:
           </div>
-          <div style={styles.menuHeaderContent} className={this.state.isBarInputFocused===false?'focused':'notfocused'}>
+          <div
+            style={styles.menuHeaderContent}
+            className={this.state.isBarInputFocused===false?'focused':'notfocused'}
+          >
             full weight:
           </div>
         </div>

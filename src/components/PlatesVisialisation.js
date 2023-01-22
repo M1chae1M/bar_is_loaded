@@ -41,11 +41,13 @@ class PlatesVisialisation extends React.Component{
     }
     return(
       <React.Fragment>
-        <div id='PlatesVisialisation' style={styles.PlatesVisialisation}
-        onMouseMove={(e)=>{
-          let newLeft=document.querySelector('#PlatesVisialisation')?parseFloat(document.querySelector('#PlatesVisialisation').getBoundingClientRect().left):null;
-          this.setState({toolTipX:(e.clientX-newLeft)});
-        }}
+        <div
+          id='PlatesVisialisation'
+          style={styles.PlatesVisialisation}
+          onMouseMove={(e)=>{
+            let newLeft=document.querySelector('#PlatesVisialisation')?parseFloat(document.querySelector('#PlatesVisialisation').getBoundingClientRect().left):null;
+            this.setState({toolTipX:(e.clientX-newLeft)});
+          }}
         >
           <div id='bar' style={styles.bar}></div>
           {
