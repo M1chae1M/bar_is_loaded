@@ -11,8 +11,6 @@ class PlatesVisialisation extends React.Component{
   render(){
     const styles={
       PlatesVisialisation:{
-        backgroundColor:'grey',
-        background:'radial-gradient(ellipse at top, gray, transparent),radial-gradient(ellipse at bottom, grey, transparent)',
         display:'flex',
         alignItems:'center',
         height:'calc(var(--height)+20)',

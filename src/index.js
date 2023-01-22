@@ -31,6 +31,9 @@ class App extends React.Component{
         borderRadius:'10.5px',
         overflow:'hidden',
         boxShadow:'grey 2px 2.5px 11px',
+        gridTemplateRows:'30% 70%',
+        backgroundColor:'grey',
+        background:'radial-gradient(ellipse at top, gray, transparent),radial-gradient(ellipse at bottom, grey, transparent)',
       },
     }
     const roundNumberFunction=(perSide)=>{
@@ -89,6 +92,8 @@ class App extends React.Component{
             inputWeightState={this.state.inputWeightState}
             changeInputWeight={changeInputWeight}
           />
+          {/* <div>Menu</div> */}
+          
           <PlatesVisialisation platesState={this.state.platesState}/>
         </div>
       </React.Fragment>
