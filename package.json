@@ -1,7 +1,7 @@
 {
   "name": "bar_is_loaded",
   "version": "0.1.0",
-  "homepage": "",
+  "homepage": "https://m1chae1m.github.io/bar_is_loaded/build",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
