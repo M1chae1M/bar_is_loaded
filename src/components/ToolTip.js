@@ -11,7 +11,7 @@ class ToolTip extends React.Component{
         left:'0px',
         width:'30px',
         textAlign:'center',
-        transform:'translateX('+(this.props.toolTipX-15)+'px) translateY(calc(var(--height)*1.85))',
+        transform:'translateX('+(this.props.toolTipX-15)+'px) translateY(calc(var(--height)*2.3))',
         borderRadius:'5px',
         padding:'5px auto',
         verticalAlign:'middle',
