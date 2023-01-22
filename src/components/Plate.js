@@ -4,9 +4,9 @@ class Plate extends React.Component{
   render(){
     const styles={
       Plate:{
+        zIndex:'1',
         width:'var(--width)',
         border:'solid black 1px',
-        zIndex:'1',
       },
     }
     return(
