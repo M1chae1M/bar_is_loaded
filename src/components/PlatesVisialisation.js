@@ -12,20 +12,21 @@ class PlatesVisialisation extends React.Component{
     const styles={
       PlatesVisialisation:{
         display:'flex',
+        flexDirection:'row-reverse',
         alignItems:'center',
         height:'calc(var(--height)+20)',
         width:'100%',
         overflow:'hidden',
-        gap:'1px',
-        paddingLeft:'30px',
+        gap:'var(--border-or-gap-in-px)',
         paddingRight:'30px',
         paddingTop:'calc(var(--width)*2)',
         paddingBottom:'calc(var(--width)*2)',
         position:'relative',
       },
       bar:{
-        width:'100%',
         position:'absolute',
+        right:'0%',
+        width:'calc(40% + calc(var(--width)*9) + calc(var(--border-or-gap-in-px)*4*7))',
         height:'10px',
         zIndex:'1',
         backgroundColor:'black',
@@ -49,11 +50,13 @@ class PlatesVisialisation extends React.Component{
         >
           <div id='bar' style={styles.bar}></div>
           {
-            Array.from(this.props.platesState).reverse().map((x,i)=>
+            Array.from(this.props.platesState)
+            .map((x,i)=>
               <Plate
                 key={i}
                 ID={i}
                 weight={x}
+                platesState={this.props.platesState}
                 newDisplayedWeight={newDisplayedWeight}
                 show={show}
               />
