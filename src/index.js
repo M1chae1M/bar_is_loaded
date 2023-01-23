@@ -103,8 +103,6 @@ class App extends React.Component{
             inputWeightState={this.state.inputWeightState}
             changeInputWeight={changeInputWeight}
           />
-          {/* <div>Menu</div> */}
-          
           <PlatesVisialisation platesState={this.state.platesState}/>
         </div>
       </React.Fragment>
