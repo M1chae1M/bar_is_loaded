@@ -74,6 +74,12 @@ class App extends React.Component{
 
       if(timeoutIDchangeBarWeightState){clearTimeout(timeoutIDchangeBarWeightState)}
       timeoutIDchangeBarWeightState=setTimeout(()=>{
+        if(targ>=50){
+          console.log('wiecej, niż 50');
+          this.setState({emptyBarWeight:50});
+          e.target.value=50;
+          plates=howManyPlates(plates,this.state.inputWeightState,e.target.value,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+        }
         if(perSide%havePlates[0]===0&&targ >0){
           this.setState({emptyBarWeight:targ});
           plates=howManyPlates(plates,this.state.inputWeightState,targ,calcPerSide,(plates)=>{this.setState({platesState:plates})});

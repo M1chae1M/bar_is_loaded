@@ -62,6 +62,7 @@ class Menu extends React.Component{
             placeholder="input empty bar weight"
             defaultValue={this.props.emptyBarWeight}
             step="5"
+            min="5"
             max="50"
             style={styles.input}
             onChange={this.props.changeBarWeightState}
