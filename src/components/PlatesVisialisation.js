@@ -26,7 +26,6 @@ class PlatesVisialisation extends React.Component{
       bar:{
         position:'absolute',
         right:'0%',
-        // width:'calc(40% + calc(var(--width)*9) + calc(var(--border-or-gap-in-px)*4*7))',
         width:'calc(20% + calc(var(--width)*9) + calc(var(--border-or-gap-in-px)*4*7))',
         height:'10px',
         zIndex:'1',
