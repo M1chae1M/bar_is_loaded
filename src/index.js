@@ -55,7 +55,12 @@ class App extends React.Component{
               e.target.value=roundNumberFunction(perSide);
               plates=howManyPlates(plates,e.target.value,this.state.emptyBarWeight,calcPerSide,(plates)=>{this.setState({platesState:plates})});
             }
-            else{
+            if(target>=600){
+              e.target.value=600;
+              this.setState({inputWeightState:e.target.value});
+              plates=howManyPlates(plates,e.target.value,this.state.emptyBarWeight,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+            }
+            if(target<=25){
               e.target.value=25;
               this.setState({inputWeightState:e.target.value});
               plates=howManyPlates(plates,e.target.value,this.state.emptyBarWeight,calcPerSide,(plates)=>{this.setState({platesState:plates})});

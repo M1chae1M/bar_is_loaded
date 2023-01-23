@@ -62,6 +62,7 @@ class Menu extends React.Component{
             placeholder="input empty bar weight"
             defaultValue={this.props.emptyBarWeight}
             step="5"
+            max="50"
             style={styles.input}
             onChange={this.props.changeBarWeightState}
             className={this.state.isBarInputFocused===true?'focused':'notfocused'}
@@ -71,6 +72,7 @@ class Menu extends React.Component{
             type="number"
             placeholder="input weight"
             min="25"
+            max="600"
             style={styles.input}
             defaultValue={this.props.inputWeightState}
             step={(this.props.havePlates[0]*2)}
