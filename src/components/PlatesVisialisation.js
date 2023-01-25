@@ -1,5 +1,6 @@
 import React from 'react';
 import Plate from './Plate';
+import Barbell from './Barbell';
 import ToolTip from './ToolTip';
 
 class PlatesVisialisation extends React.Component{
@@ -23,14 +24,6 @@ class PlatesVisialisation extends React.Component{
         paddingBottom:'calc(var(--width)*2)',
         position:'relative',
       },
-      bar:{
-        position:'absolute',
-        right:'0%',
-        width:'calc(20% + calc(var(--width)*9) + calc(var(--border-or-gap-in-px)*4*7))',
-        height:'10px',
-        zIndex:'1',
-        backgroundColor:'black',
-      },
     }
     const show=(newState)=>{
       this.setState({showToolTip:newState});
@@ -48,7 +41,7 @@ class PlatesVisialisation extends React.Component{
             this.setState({toolTipX:(e.clientX-newLeft)});
           }}
         >
-          <div id='bar' style={styles.bar}></div>
+          <Barbell/>
           {
             Array.from(this.props.platesState)
             .map((x,i)=>
