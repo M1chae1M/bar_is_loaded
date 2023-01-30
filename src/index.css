@@ -3,6 +3,10 @@ html,body,#root{width:100vw;height:100vh;position:relative;
 display:grid;
 justify-items:center;align-items:center;
 }
+html{
+background-color:#b8b8b8;
+background:linear-gradient(193deg,#b8b8b8 0%,#d4d4d4 40%,#e6e6e6 50%,#f0f0f0 60%,#ffffff 80%);
+}
 :root{
 --height:16vh;
 --width:2vw;

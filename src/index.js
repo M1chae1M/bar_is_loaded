@@ -10,7 +10,6 @@ import PlatesVisialisation from './components/PlatesVisialisation';
 import './index.css';
 
 var plates=[2.5,0];
-
 class App extends React.Component{
   state={
     inputWeightState:205,
@@ -34,6 +33,11 @@ class App extends React.Component{
         gridTemplateRows:'30% 70%',
         backgroundColor:'grey',
         background:'radial-gradient(ellipse at top, gray, transparent),radial-gradient(ellipse at bottom, grey, transparent)',
+        border:'var(--dark-grey) 1px solid',
+      },
+      backgroundDiv:{
+        backgroundColor:'white',
+        borderRadius:'10.5px',
       },
     }
     const roundNumberFunction=(perSide)=>{
@@ -95,15 +99,17 @@ class App extends React.Component{
       <React.Fragment>
         <InfoButton/>
         <Info/>
-        <div id='App' style={styles.App}>
-          <Menu
-            changeBarWeightState={changeBarWeightState}
-            emptyBarWeight={this.state.emptyBarWeight}
-            havePlates={havePlates}
-            inputWeightState={this.state.inputWeightState}
-            changeInputWeight={changeInputWeight}
-          />
-          <PlatesVisialisation platesState={this.state.platesState}/>
+        <div style={styles.backgroundDiv}>
+          <div id='App' style={styles.App}>
+            <Menu
+              changeBarWeightState={changeBarWeightState}
+              emptyBarWeight={this.state.emptyBarWeight}
+              havePlates={havePlates}
+              inputWeightState={this.state.inputWeightState}
+              changeInputWeight={changeInputWeight}
+            />
+            <PlatesVisialisation platesState={this.state.platesState}/>
+          </div>
         </div>
       </React.Fragment>
     );

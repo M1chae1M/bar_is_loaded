@@ -9,11 +9,12 @@ class Menu extends React.Component{
       Menu:{
         width:'40vw',
         display:'grid',
-        borderRadius:'10.5px',
         overflow:'hidden',
         zIndex:'1410',
         flexWrap:'wrap',
         border:'none',
+        borderBottomRightRadius:'10.5px',
+        borderBottomLeftRadius:'10.5px',
       },
       menuHeader:{
         color:'var(--blast)',
@@ -22,6 +23,8 @@ class Menu extends React.Component{
         height:'auto',
         textAlign:'center',
         border:'none',
+        borderTopRightRadius:'10.5px',
+        borderTopLeftRadius:'10.5px',
       },
       menuHeaderContent:{
         padding:'3px',
