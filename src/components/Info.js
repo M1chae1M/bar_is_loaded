@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Info extends React.Component{
+export default class Info extends React.Component{
   render(){
     const styles={
       Info:{
@@ -41,5 +41,3 @@ class Info extends React.Component{
     );
   }
 }
-
-export default Info;

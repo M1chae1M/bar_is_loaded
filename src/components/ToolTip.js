@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ToolTip extends React.Component{
+export default class ToolTip extends React.Component{
   render(){
     const styles={
       ToolTip:{
@@ -24,5 +24,3 @@ class ToolTip extends React.Component{
     );
   }
 }
-
-export default ToolTip;

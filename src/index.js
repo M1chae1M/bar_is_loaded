@@ -10,14 +10,22 @@ import PlatesVisialisation from './components/PlatesVisialisation';
 import './index.css';
 
 var plates=[2.5,0];
-class App extends React.Component{
+export default class App extends React.Component{
   state={
     inputWeightState:205,
     emptyBarWeight:20,
     platesState:plates,
   }
   componentDidMount(){
-    plates=howManyPlates(plates,this.state.inputWeightState,this.state.emptyBarWeight,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+    plates=howManyPlates(
+      plates,
+      this.state.inputWeightState,
+      this.state.emptyBarWeight,
+      calcPerSide,
+      (plates)=>{
+        this.setState({platesState:plates})
+      }
+    );
   }
   render(){
     const styles={
@@ -57,17 +65,41 @@ class App extends React.Component{
             this.setState({inputWeightState:target});
             if((this.state.emptyBarWeight+5)<=target){
               e.target.value=roundNumberFunction(perSide);
-              plates=howManyPlates(plates,e.target.value,this.state.emptyBarWeight,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+              plates=howManyPlates(
+                plates,
+                e.target.value,
+                this.state.emptyBarWeight,
+                calcPerSide,
+                (plates)=>{
+                  this.setState({platesState:plates})
+                }
+              );
             }
             if(target>=600){
               e.target.value=600;
               this.setState({inputWeightState:e.target.value});
-              plates=howManyPlates(plates,e.target.value,this.state.emptyBarWeight,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+              plates=howManyPlates(
+                plates,
+                e.target.value,
+                this.state.emptyBarWeight,
+                calcPerSide,
+                (plates)=>{
+                  this.setState({platesState:plates})
+                }
+              );
             }
             if(target<=25){
               e.target.value=25;
               this.setState({inputWeightState:e.target.value});
-              plates=howManyPlates(plates,e.target.value,this.state.emptyBarWeight,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+              plates=howManyPlates(
+                plates,
+                e.target.value,
+                this.state.emptyBarWeight,
+                calcPerSide,
+                (plates)=>{
+                  this.setState({platesState:plates})
+                }
+              );
             }
         }, 1000);
     }
@@ -82,16 +114,39 @@ class App extends React.Component{
           console.log('wiecej, niż 50');
           this.setState({emptyBarWeight:50});
           e.target.value=50;
-          plates=howManyPlates(plates,this.state.inputWeightState,e.target.value,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+          plates=howManyPlates(
+            plates,
+            this.state.inputWeightState,
+            e.target.value,
+            calcPerSide,
+            (plates)=>{
+              this.setState({platesState:plates})
+            }
+          );
         }
         if(perSide%havePlates[0]===0&&targ >0){
           this.setState({emptyBarWeight:targ});
-          plates=howManyPlates(plates,this.state.inputWeightState,targ,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+          plates=howManyPlates(
+            plates,
+            this.state.inputWeightState,
+            targ,calcPerSide,
+            (plates)=>{
+              this.setState({platesState:plates})
+            }
+          );
         }
         else{
           this.setState({emptyBarWeight:20});
           e.target.value=20;
-          plates=howManyPlates(plates,this.state.inputWeightState,e.target.value,calcPerSide,(plates)=>{this.setState({platesState:plates})});
+          plates=howManyPlates(
+            plates,
+            this.state.inputWeightState,
+            e.target.value,
+            calcPerSide,
+            (plates)=>{
+              this.setState({platesState:plates})
+            }
+          );
         }
       },1000);
     }

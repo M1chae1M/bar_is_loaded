@@ -3,7 +3,7 @@ import Plate from './Plate';
 import Barbell from './Barbell';
 import ToolTip from './ToolTip';
 
-class PlatesVisialisation extends React.Component{
+export default class PlatesVisialisation extends React.Component{
   state={
     showToolTip:false,
     displayedWeight:'',
@@ -37,7 +37,10 @@ class PlatesVisialisation extends React.Component{
           id='PlatesVisialisation'
           style={styles.PlatesVisialisation}
           onMouseMove={(e)=>{
-            let newLeft=document.querySelector('#PlatesVisialisation')?parseFloat(document.querySelector('#PlatesVisialisation').getBoundingClientRect().left):null;
+            let newLeft=
+              document.querySelector('#PlatesVisialisation')?
+                parseFloat(document.querySelector('#PlatesVisialisation').getBoundingClientRect().left):
+                  null;
             this.setState({toolTipX:(e.clientX-newLeft)});
           }}
         >
@@ -68,5 +71,3 @@ class PlatesVisialisation extends React.Component{
     );
   }
 }
-
-export default PlatesVisialisation;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class InfoButton extends React.Component{
+export default class InfoButton extends React.Component{
   render(){
     const styles={
       InfoButton:{
@@ -27,5 +27,3 @@ class InfoButton extends React.Component{
     );
   }
 }
-
-export default InfoButton;

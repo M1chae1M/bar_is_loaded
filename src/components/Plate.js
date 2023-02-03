@@ -1,6 +1,7 @@
 import React from 'react';
 import addPlateColors from './functions/addPlateColors';
-class Plate extends React.Component{
+
+export default class Plate extends React.Component{
   render(){
     const styles={
       Plate:{
@@ -31,5 +32,3 @@ class Plate extends React.Component{
     );
   }
 }
-
-export default Plate;

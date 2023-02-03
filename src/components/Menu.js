@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Menu extends React.Component{
+export default class Menu extends React.Component{
   state={
     isBarInputFocused:true,
   }
@@ -89,5 +89,3 @@ class Menu extends React.Component{
     );
   }
 }
-
-export default Menu;
